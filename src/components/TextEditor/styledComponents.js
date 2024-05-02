@@ -52,7 +52,7 @@ export const Image = styled.img`
   margin-bottom: 30px;
 `
 
-export const ButtonsContainer = styled.div`
+export const ButtonsContainer = styled.ul`
   display: flex;
   align-items: center;
   padding: 5px;
@@ -60,20 +60,22 @@ export const ButtonsContainer = styled.div`
 export const BoldButton = styled.button`
   font-weight: 400;
   background-color: transparent;
-  color: #ffffff;
   font-size: 18px;
   width: 30px;
   height: 30px;
   margin: 8px;
   cursor: pointer;
   border: none;
-  color: ${props => (props.bold ? '#faff00' : '#ffffff')};
+  color: ${props => (props.bold ? '#faff00' : '#f1f5f9')};
+`
+
+export const Item = styled.li`
+  list-style: none;
 `
 
 export const ItalicButton = styled.button`
   font-weight: 400;
   background-color: transparent;
-  color: #ffffff;
   font-size: 20px;
   width: 30px;
   height: 30px;
@@ -81,12 +83,12 @@ export const ItalicButton = styled.button`
   cursor: pointer;
   font-style: italic;
   border: none;
+  color: ${props => (props.italic ? '#faff00' : '#f1f5f9')};
 `
 
 export const UnderLineButton = styled.button`
   font-weight: 400;
   background-color: transparent;
-  color: #ffffff;
   font-size: 18px;
   width: 30px;
   height: 30px;
@@ -94,8 +96,23 @@ export const UnderLineButton = styled.button`
   cursor: pointer;
   text-decoration: underline;
   border: none;
+  color: ${props => (props.underline ? '#faff00' : '#f1f5f9')};
 `
 
 export const Line = styled.hr`
   border: 1px solid #334155;
+`
+
+export const Field = styled.textarea`
+  background-color: transparent;
+  height: 88%;
+  width: 100%;
+  color: #f1f5f9;
+  padding: 20px;
+  font-size: 15px;
+  outline: none;
+  border: none;
+  font-weight: ${props => props.isBold};
+  font-style: ${props => props.isItalic};
+  text-decoration: ${props => props.isUnderline};
 `
